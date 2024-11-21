@@ -1,13 +1,22 @@
 # Influencers amplify the chain of shared posts in online communities
-This project is supplementally materials of "Influencers’ Reposts and Viral Diffusion: Prestige Bias in Online Communities.".
+This project is supplementally materials of "Influencers’ Reposts and Viral Diffusion: Prestige Bias in Online Communities.".  
 
 In paticular, the project holds our analysis codes.  
 This project does not include data and collecting code for X (Twitter) API data.  
 
-In consideration of privacy, we do not release data containing individual user information.
-However, we will release the aggregated data used for the plots and the code used to create them.
+# If you want to replicate the experiment
+
+```python
+# After `rye sync` (setup this script) and downloaded files from Zenodo.
+
+# retweet counts >= 5000 and in 3hours
+rye run python src/secondary_spreads_of_influencers/analysis_second_spreads.py --retweet_count_path data/retweet_counts.parquet --aggregated_virtual_timeline data/virtual_timeline_agggated_data_anonymized/in_3hours_anonymyzed.parquet --user_influence_score_path data/user_hgindex_anonymized.parquet --is_in_cascade --exclude_official --min_rt 5000 --save_path YOUR_SAVE_PATH
+```
 
 # Data Overview
+The following data represents summary statistics that were used to generate plots and analyses in the paper:
+
+```
 data
 ├── Figure3_raw.xlsx
 ├── Figure4a_raw.xlsx
@@ -15,8 +24,28 @@ data
 ├── FigureS1_summary.xlsx
 ├── FigureS2_summary.xlsx
 └── RetweetStatistics.xlsx
+```
+
+The source data also is available in compressed parquet format for reproducibility.  
+However, due to the large file sizes, we have uploaded them at Google Drive.  
+The files can be downloaded [here](https://drive.google.com/drive/folders/1-KBr37RuOi1yrtaMI-QQKmTvENBub-xr?usp=sharing).
+
+```
+├── user_hgindex_anonymized.parquet.zip      # User influence metrics
+├── virtual_timeline_agggated_data_anonymized.zip
+│   ├── all_anonymized.parquet               # Complete timeline data
+│   ├── in_1day_anonymized.parquet          # 24hour aggregated data
+│   ├── in_12hours_anonymized.parquet       # 12hour aggregated data
+│   ├── in_6hours_anonymized.parquet        # 6hour aggregated data
+│   └── in_3hours_anonymized.parquet        # 3hour aggregated data
+├── target_retweets.parquet.zip             # Analysis target tweets
+└── retweet_counts.parquet.zip              # Source tweet metrics
+```
+
 
 # Code Overview
+
+```
 src/secondary_spreads_of_influencers
 ├── __init__.py
 ├── models.py
@@ -45,4 +74,17 @@ src/secondary_spreads_of_influencers
 ├── plot_sv_by_user_influence.py (Figure S2)
 ├── rt_path_clustering.py
 └── utils.py
+```
 
+# Citation
+```
+@misc{takuro2024influencersrepostsviraldiffusion,
+      title={Influencers' Reposts and Viral Diffusion: Prestige Bias in Online Communities}, 
+      author={Takuro Niitsuma and Mitsuo Yoshida and Hideaki Tamori and Yo Nakawake},
+      year={2024},
+      eprint={2411.05448},
+      archivePrefix={arXiv},
+      primaryClass={cs.SI},
+      url={https://arxiv.org/abs/2411.05448}, 
+}
+```
