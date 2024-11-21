@@ -1,13 +1,11 @@
 # Influencers amplify the chain of shared posts in online communities
 This project is supplementally materials of "Influencers’ Reposts and Viral Diffusion: Prestige Bias in Online Communities.".  
-
-In paticular, the project holds our analysis codes.  
-This project does not include data and collecting code for X (Twitter) API data.  
+In paticular, the project holds our analysis codes and data.  
 
 # If you want to replicate the experiment
 
 ```python
-# After `rye sync` (setup this script) and downloaded files from Zenodo.
+# After `rye sync` (setup this script) and downloaded files from Google Drive.
 
 # retweet counts >= 5000 and in 3hours
 rye run python src/secondary_spreads_of_influencers/analysis_second_spreads.py --retweet_count_path data/retweet_counts.parquet --aggregated_virtual_timeline data/virtual_timeline_agggated_data_anonymized/in_3hours_anonymyzed.parquet --user_influence_score_path data/user_hgindex_anonymized.parquet --is_in_cascade --exclude_official --min_rt 5000 --save_path YOUR_SAVE_PATH
