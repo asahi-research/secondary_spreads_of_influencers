@@ -96,6 +96,8 @@ src/secondary_spreads_of_influencers
 ├── plot_retweet_user_ccdf.py (Figure S1, Figure 4(a))
 ├── plot_sv_by_user_influence.py (Figure S2)
 ├── rt_path_clustering.py
+├── extract_rt_ids.py 
+├── anonymized_user_ids.py
 └── utils.py
 ```
 
