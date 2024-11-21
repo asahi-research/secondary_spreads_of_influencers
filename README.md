@@ -101,7 +101,7 @@ src/secondary_spreads_of_influencers
 
 # Citation
 ```
-@misc{takuro2024influencersrepostsviraldiffusion,
+@misc{niitsuma_2024,
       title={Influencers' Reposts and Viral Diffusion: Prestige Bias in Online Communities}, 
       author={Takuro Niitsuma and Mitsuo Yoshida and Hideaki Tamori and Yo Nakawake},
       year={2024},
