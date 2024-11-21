@@ -1,0 +1,52 @@
+[project]
+name = "secondary_spreads_of_influencers"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Takuro Niitsuma", email = "niitsuma-t@asahi.com" }
+]
+dependencies = [
+    "polars==1.1.0",
+    "numpy>=1.26.4",
+    "scipy==1.10.1",
+    "tqdm>=4.66.4",
+    "networkx>=3.3",
+    "pydantic>=2.7.3",
+    "scikit-learn>=1.5.2",
+    "matplotlib>=3.9.0",
+    "pyarrow>=16.1.0",
+    "seaborn>=0.13.2",
+    "xlsxwriter>=3.2.0",
+    "scienceplots>=2.1.1",
+    "nx-cugraph-cu12>=24.6.1",
+    "pylibcugraph-cu12==24.6.1",
+    "fastexcel>=0.11.5",
+    "cugraph-cu12==24.6.1",
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff-lsp>=0.0.53",
+    "python-lsp-ruff>=2.2.1",
+    "ipdb>=0.13.13",
+    "python-lsp-server>=1.11.0",
+    "ruff>=0.4.8",
+]
+
+[[tool.rye.sources]]
+name = "RAPIDUS"
+url = "https://pypi.nvidia.com"
+type = "index"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/analysis_tweets_for_mci"]
