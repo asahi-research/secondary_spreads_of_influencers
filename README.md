@@ -1,6 +1,6 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2411.05448-b31b1b.svg)](https://arxiv.org/abs/2411.05448)
 
-# Influencers amplify the chain of shared posts in online communities
+# Influencers’ Reposts and Viral Diffusion: Prestige Bias in Online Communities.
 This project is supplementally materials of "Influencers’ Reposts and Viral Diffusion: Prestige Bias in Online Communities.".  
 In paticular, the project holds our analysis codes and data.  
 
