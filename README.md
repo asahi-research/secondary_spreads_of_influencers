@@ -40,6 +40,29 @@ The files can be downloaded [here](https://drive.google.com/drive/folders/1-KBr3
 └── retweet_counts.parquet.zip              # Source tweet metrics
 ```
 
+### target\_retweets.parquet
+Contains three columns derived from X's API response.
+This data consists of three columns derived from X's API response JSON data:
+- source\_tweet\_id: corresponds to the 'id' field within the 'retweeted\_status' object
+- tweet\_id: corresponds to the 'id' field
+- timestamp: Unix timestamp converted from the 'created\_at' field
+
+### virtual\_timeline\_agggated\_data\_anonymized
+Contains aggregated view and retweet counts per second spreaders across different time windows.
+Each file represents data aggregated over the specified time period.
+
+### user\_hgindex\_anonymized.parquet
+Contains anonymized user influence metrics including:
+- Anonymized user identifiers
+- hg-index values
+- Related influence metrics
+
+### retweet\_counts.parquet
+Contains retweet count metrics for source tweets.
+
+
+For dataset-related inquiries, please contact niitsuma-t[at]asahi.com.
+
 
 # Code Overview
 
