@@ -28,7 +28,9 @@ data
 
 The source data also is available in compressed parquet format for reproducibility.  
 However, due to the large file sizes, we have uploaded them at Google Drive.  
-The files can be downloaded [here](https://drive.google.com/drive/folders/1-KBr37RuOi1yrtaMI-QQKmTvENBub-xr?usp=sharing).
+The files can be downloaded [here](https://drive.google.com/drive/folders/1-KBr37RuOi1yrtaMI-QQKmTvENBub-xr?usp=sharing).  
+
+**Please note: Due to privacy considerations and X's terms of service, user data has been anonymized by reassigning IDs based on hg-index ranking, with sequential assignments for tied ranks.**
 
 ```
 ├── user_hgindex_anonymized.parquet.zip      # User influence metrics
